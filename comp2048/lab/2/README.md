@@ -7,4 +7,17 @@ Intro:
 
 Monoalphabetinc Substution Ciphers :: plain enclish __ letter for letter substution cipher:
 
-	*) scrambellnig of the alphabet : premutation of the alphabet 26!
+	scrambellnig of the alphabet : premutation of the alphabet 26!
+
+	a simple Caesar is a shift and there are 26 different to choose a shift
+
+	Frequency analysis by arabs in 900ce
+
+	The Vigenere Cipher: requires a agreed upon keyword thats written multipletime and each plaintext letter
+				is mapped to its corresponding Caesar shift
+				i.e. T mapes to V as A mapes to C i.e a shift of 3 letters
+				H mapes to S as A mapes to L a shift of 10 lettes
+
+		keyword: 	CLIMBCLIMBCLIM...
+		plaintext:	THEREISNOLIMIT...
+		ciphertext:	VSMDFKDVAMKXQF...
