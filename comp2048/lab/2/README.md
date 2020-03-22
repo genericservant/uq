@@ -1,6 +1,8 @@
-links = ['enigma doc': 'https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/wwii/german_cipher.pdf',
-	'mathew perry' : 'https://www.realcty.org/wiki/Cryptology'
-	]
+Links:
+	'enigma doc' :
+	'https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/wwii/german_cipher.pdf',
+	'david perry' :
+	'https://www.realcty.org/wiki/Cryptology'
 
 Intro:
 
