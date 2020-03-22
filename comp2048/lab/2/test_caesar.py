@@ -13,7 +13,7 @@ import string
 letters = string.ascii_letters #contains 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 message = "The quick brown fox jumped over the lazy dog" #type your message here
-'''
+''' uncomment this to see the cracked code of the tese_caesar_break.py
 message = "Zyp cpxpxmpc ez wzzv fa le esp delcd lyo yze ozhy\
  le jzfc qppe Ehz ypgpc rtgp fa hzcv Hzcv rtgpd jzf xplytyr \
  lyo afcazdp lyo wtqp td pxaej hteszfe te Escpp tq jzf lcp w\
@@ -38,7 +38,7 @@ for index, letter in enumerate(letters):
         keys[letter] = str(totalLetters + ((index+offset-totalLetters) % (totalLetters)))
 
     invkeys[keys[letter]] = letter
-    
+
 print("Cypher Dict:", keys)
 
 #encrypt
