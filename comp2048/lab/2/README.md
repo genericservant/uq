@@ -3,6 +3,8 @@ Links:
 	'https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/wwii/german_cipher.pdf',
 	'david perry' :
 	'https://www.realcty.org/wiki/Cryptology'
+	'simon singh :: the code book' :
+	'https://www.math.uci.edu/~brusso/freshman6.pdf'
 
 Intro:
 
@@ -27,3 +29,22 @@ Monoalphabetinc Substution Ciphers :: plain enclish __ letter for letter substut
 		keyword: 	CLIMBCLIMBCLIM...
 		plaintext:	THEREISNOLIMIT...
 		ciphertext:	VSMDFKDVAMKXQF...
+
+		symboltable:	+-/*&+-/*&+-/*...
+
+				(---)(---)(---...
+
+				essentially we in a big text we can see patterns after blocks because after the length of
+				the keyword the shift is repeated
+				from the patterns we can deduce which what may be the length of the keyword noteing the shortest
+				pattern. Breaking the cipher text in to symbols and then we mathch it to normal english using freq
+				analysis. After that we may deduce that the shift for each symbol taking samples
+				say for example the + cipher text destribution and figure out the shift from that matching it with
+				english language normal distribution i.e. e occurs max and stu occur okaish times then drop in freq for
+				vwxy sharp drop and then for a spike i.e. a histogram to and try to shift our histo to match the normal
+				one to figure out the shift for + symbol
+				trial and error
+				eventually for all symbols
+
+Enigma: all of the above was motivation for the enigma; so we know how to crack vigenere cipher because of the keyword repeating
+	now imagine the keyword spans for the entire text or theoretically anyway for a text for n size where n is reazonabelly large
