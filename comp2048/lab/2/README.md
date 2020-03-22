@@ -46,6 +46,10 @@ Monoalphabetinc Substution Ciphers :: plain enclish __ letter for letter substut
 				trial and error
 				eventually for all symbols
 
-Enigma: https://www.codesandciphers.org.uk/enigma/steckercount.htm
+Enigma:
+	https://www.codesandciphers.org.uk/enigma/steckercount.htm
+
 	all of the above was motivation for the enigma; so we know how to crack vigenere cipher because of the keyword repeating
 	now imagine the keyword spans for the entire text or theoretically anyway for a text for n size where n is reazonabelly large
+
+
