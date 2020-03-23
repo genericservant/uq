@@ -14,7 +14,7 @@ message = "Zyp cpxpxmpc ez wzzv fa le esp delcd lyo yze ozhy\
  lyo afcazdp lyo wtqp td pxaej hteszfe te Escpp tq jzf lcp w\
  fnvj pyzfrs ez qtyo wzgp cpxpxmpc te td espcp lyo ozye escz\
  h te lhlj Depaspy Slhvtyr"
-
+message = "Iwt fjxrz qgdlc udm yjbets dktg iwt apon sdv"
 #frequency of each letter
 letter_counts = Counter(message)
 #print(letter_counts)
@@ -23,7 +23,7 @@ letter_counts = Counter(message)
 maxFreq = -1
 maxLetter = None
 for letter, freq in letter_counts.items():
-    print(letter, ":", freq)
+    #print(letter, ":", freq)
     #INSERT CODE TO REMEMBER MAX
     if (letter != ' ' and maxFreq < freq):
         maxFreq = freq
