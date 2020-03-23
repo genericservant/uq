@@ -82,3 +82,33 @@ def brute_force(keys_n):
 keys_n = [MAX_KEY_SIZE-1, MAX_KEY_SIZE-1, MAX_KEY_SIZE-1]
 
 brute_force(keys_n)
+
+'''
+d)
+	Output for time
+	2012
+	- 8 core i7 at 1.734GHz
+	- memory 7897MiB 64bit int
+	time::
+		real	0m28.205s
+		user	0m27.856s
+		sys		0m0.166s
+
+	1936 - The Z1 (First programmable computer)
+	- Clock Speed : 1Hz
+	- memory 64 words
+	time::
+		real	1 / ( 8 * 1.7345 * (10^6) ) ---> 28sec
+				1 / ( 1 )					---> x
+				---------------------------------
+				x = 388527999sec ~= 12.3 years?
+--
+e)
+	26^3 possibilities -> 28 seconds
+	plugboard with 6 wires, paires of 6 letters being scrambled or obscured 26! / ( ( 26 - 11 )! * 2^6 * 6! )
+	26^5 + 26! / ( ( 26 - 11 )! * 2^6 * 6! ) = 6704667476 -> x
+	-----------
+	x = 10681081 seconds ~= 123.6 days?
+
+
+'''
