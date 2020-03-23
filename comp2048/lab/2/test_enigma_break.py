@@ -17,11 +17,14 @@ import rotor
 letters = string.ascii_letters #contains 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 capitalLetters = letters[-26:]
 #print(capitalLetters)
-
+# try this one, its creeping me out its like a false positive but its so weird
 ShakesHorribleMessage = "Xm xti ca idjmq Ecokta Rkhoxuu! Kdiu gm xex oft uz yjwenv qik \
 							parwc hs emrvm sfzu qnwfg. Gvgt vz vih rlt ly cnvpym xtq sg\
 							fvk jp jatrl irzru oubjo odp uso nsty jm gfp lkwrx pliv ojf\
 							o rl rylm isn aueuom! Gdwm Qopjmw!"
+
+ShakesHorribleMessage = "Xm xti ca idjmq Ecokta Rkhoxuu! Kdiu gm xex oft uz yjwenv qik parwc hs emrvm sfzu qnwfg. Gvgt vz vih rlt ly cnvpym xtq sgfvk jp jatrl irzru oubjo odp uso nsty jm gfp lkwrx pliv ojfo rl rylm isn aueuom! Gdwm Qopjmw!"
+
 crib = "Hail Shakes!"
 crib_substring = ""
 print(crib_substring)
@@ -33,7 +36,6 @@ MAX_KEY_SIZE = 26
 ALPHA_ASCII_START = 65
 MAX_TRIALS = (MAX_KEY_SIZE)*(MAX_KEY_SIZE)*(MAX_KEY_SIZE)
 
-keys_n = [MAX_KEY_SIZE-1, MAX_KEY_SIZE-1, MAX_KEY_SIZE-1]
 # Generate Key
 def keys_gen(prev_keys):
 	prev_keys[0] = ( prev_keys[0] + 1 ) % MAX_KEY_SIZE
@@ -67,10 +69,16 @@ def brute_force(keys_n):
 		crib_substring = decoded_ShakesHorribleMessage[-12:]
 		# Search match for crib at end
 		if crib_substring == crib:
-			print("MATCH FOUND!!! Key = {}".format(convert_keys(keys_n)))
+			print("trial #{} MATCH FOUND!!! Key = {}".format(trial, convert_keys(keys_n)))
 			#Print the Decoded message
+			print("Encrypted--------")
+			print(ShakesHorribleMessage)
+			print("Decrypted--------")
 			print(decoded_ShakesHorribleMessage)
 			return keys_n
 		trial+=1
+	return None
+
+keys_n = [MAX_KEY_SIZE-1, MAX_KEY_SIZE-1, MAX_KEY_SIZE-1]
 
 brute_force(keys_n)
