@@ -6,7 +6,9 @@ Links:
 	'simon singh :: the code book' :
 	'https://www.math.uci.edu/~brusso/freshman6.pdf',
 	'japanese jn25b; I have the pleasure to inform the emperor...' :
-	'https://homepage.smc.edu/morgan_david/linux/lab-publickey-jn25.pdf', 'https://en.wikipedia.org/wiki/Japanese_naval_codes'
+	'https://homepage.smc.edu/morgan_david/linux/lab-publickey-jn25.pdf',
+	'https://en.wikipedia.org/wiki/Japanese_naval_codes',
+	'https://www.governmentattic.org/18docs/Hist_US_COMSEC_Boak_NSA_1973u.pdf'
 Intro:
 
 	Looking at some videos by numberphile and computerphile on utbe but havent really understood.
