@@ -2,10 +2,11 @@ Links:
 	'enigma doc' :
 	'https://www.nsa.gov/Portals/70/documents/about/cryptologic-heritage/historical-figures-publications/publications/wwii/german_cipher.pdf',
 	'david perry' :
-	'https://www.realcty.org/wiki/Cryptology'
+	'https://www.realcty.org/wiki/Cryptology',
 	'simon singh :: the code book' :
-	'https://www.math.uci.edu/~brusso/freshman6.pdf'
-
+	'https://www.math.uci.edu/~brusso/freshman6.pdf',
+	'japanese jn25b; I have the pleasure to inform the emperor...' :
+	'https://homepage.smc.edu/morgan_david/linux/lab-publickey-jn25.pdf', 'https://en.wikipedia.org/wiki/Japanese_naval_codes'
 Intro:
 
 	Looking at some videos by numberphile and computerphile on utbe but havent really understood.
