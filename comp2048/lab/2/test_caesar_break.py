@@ -14,7 +14,7 @@ message = "Zyp cpxpxmpc ez wzzv fa le esp delcd lyo yze ozhy\
  lyo afcazdp lyo wtqp td pxaej hteszfe te Escpp tq jzf lcp w\
  fnvj pyzfrs ez qtyo wzgp cpxpxmpc te td espcp lyo ozye escz\
  h te lhlj Depaspy Slhvtyr"
-message = "Iwt fjxrz qgdlc udm yjbets dktg iwt apon sdv"
+#message = "Iwt fjxrz qgdlc udm yjbets dktg iwt apon sdv"
 #frequency of each letter
 letter_counts = Counter(message)
 #print(letter_counts)
@@ -35,3 +35,10 @@ print("Max Ocurring Letter:", maxLetter)
 letters = string.ascii_letters #contains 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 shift = ( ord(maxLetter) - ord('e') ) % 26 #COMPUTE SHIFT HERE
 print("Predicted Shift:", shift)
+
+from test_caesar import Caesar
+
+c = Caesar(message, 26-shift)
+c.create_keys()
+c.encrypt()
+print("Broken: " + c.nums_to_letters(c.encryptedMessage))
