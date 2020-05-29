@@ -105,8 +105,8 @@ d)
 --
 e)
 	26^3 possibilities -> 28 seconds
-	plugboard with 6 wires, paires of 6 letters being scrambled or obscured 26! / ( ( 26 - 11 )! * 2^6 * 6! )
-	26^5 + 26! / ( ( 26 - 11 )! * 2^6 * 6! ) = 6704667476 -> x
+	plugboard with 6 wires, paires of 6 letters being scrambled or obscured 26! / ( ( 26 - 12 )! * 2^6 * 6! )
+	26^5 + [ 26! / ( ( 26 - 12 )! * 2^6 * 6! ) ] = 6704667476 -> x
 	-----------
 	x = 10681081 seconds ~= 123.6 days?
 

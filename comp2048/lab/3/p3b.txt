@@ -1,0 +1,11 @@
+1)
+    For a university course
+    this is this only for making us understand the conceptual model (universal turing machine) as,
+2)
+    if uni had to provide actual physical turing machine with transistors and all then it would be expensive and difficult to maintain.
+3)
+    in a abstract space like world of python
+    we are simulating behavour of the machine
+    like maybe a virtual machine on Windows runnung linux
+    e.g. if linux os doesnt support your machine (propritary drivers :c)
+    portability.

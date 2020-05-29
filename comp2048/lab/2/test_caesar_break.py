@@ -14,8 +14,9 @@ message = "Zyp cpxpxmpc ez wzzv fa le esp delcd lyo yze ozhy\
  lyo afcazdp lyo wtqp td pxaej hteszfe te Escpp tq jzf lcp w\
  fnvj pyzfrs ez qtyo wzgp cpxpxmpc te td espcp lyo ozye escz\
  h te lhlj Depaspy Slhvtyr"
+message="cbmm"
 #message = "Iwt fjxrz qgdlc udm yjbets dktg iwt apon sdv"
-message = "Wtaad bn cpbt xh hwpzth x pb ldgzxcv pi iwt jcxktghxin du fjttchapcs stepgibtci du rdbejitg hrxtcrt"
+#message = "Wtaad bn cpbt xh hwpzth x pb ldgzxcv pi iwt jcxktghxin du fjttchapcs stepgibtci du rdbejitg hrxtcrt"
 #frequency of each letter
 letter_counts = Counter(message)
 #print(letter_counts)
@@ -34,7 +35,7 @@ print("Max Ocurring Letter:", maxLetter)
 #predict shift
 #assume max letter is 'e'
 letters = string.ascii_letters #contains 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-shift = ( ord(maxLetter) - ord('e') ) % 26 #COMPUTE SHIFT HERE
+shift = ( ord(maxLetter) - ord('l') ) % 26 #COMPUTE SHIFT HERE
 print("Predicted Shift:", shift)
 
 from test_caesar import Caesar

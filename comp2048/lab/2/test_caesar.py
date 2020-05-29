@@ -73,7 +73,8 @@ lyo afcazdp lyo wtqp td pxaej hteszfe te Escpp tq jzf lcp w\
 fnvj p	yzfrs ez qtyo wzgp cpxpxmpc te td espcp lyo ozye escz\
 h te lhlj Depaspy Slhvtyr"
 '''
-DEFAULT_OFFSET = -11
+DEFAULT_MESSAGE="ball"
+DEFAULT_OFFSET = +1
 
 def get_argument():
 	import sys
