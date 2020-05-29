@@ -15,6 +15,7 @@ message = "Zyp cpxpxmpc ez wzzv fa le esp delcd lyo yze ozhy\
  fnvj pyzfrs ez qtyo wzgp cpxpxmpc te td espcp lyo ozye escz\
  h te lhlj Depaspy Slhvtyr"
 #message = "Iwt fjxrz qgdlc udm yjbets dktg iwt apon sdv"
+message = "Wtaad bn cpbt xh hwpzth x pb ldgzxcv pi iwt jcxktghxin du fjttchapcs stepgibtci du rdbejitg hrxtcrt"
 #frequency of each letter
 letter_counts = Counter(message)
 #print(letter_counts)
