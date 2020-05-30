@@ -172,7 +172,14 @@ class GameOfLife:
         self.grid[index[0]+8, index[1]+13] = self.aliveValue
 
         #left column off by 1 and right off by 2 with starting one off by 1
-
+    def show(self):
+        row, column = self.grid.shape
+        for x in range(0, row):
+            line=""
+            for y in range(0, column):
+                line+="{}".format(self.grid[x][y])
+            print(line)
+    
     def insert_from_url(self, url, index=(0,0)):
 
         def read_url(url):

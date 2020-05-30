@@ -8,14 +8,14 @@ Created on Tue Jan 15 12:37:52 2019
 """
 import conway
 
-N = 64
+N = 25
 
 #create the game of life object
 life = conway.GameOfLife(N)
-#life.insertBlinker((60,15))
+life.insertBlinker((0,0))
 #life.insertGlider((55,55))
 #life.insertGliderGun(((0, 0)))
-life.insert_from_url("http://www.conwaylife.com/patterns/258p3onachimsp11.cells")
+#life.insert_from_url("http://www.conwaylife.com/patterns/258p3onachimsp11.cells")
 cells = life.getStates() #initial state
 
 #-------------------------------
@@ -34,6 +34,7 @@ def animate(i):
     global life
 
     life.evolve()
+    life.show()
     cellsUpdated = life.getStates()
 
     img.set_array(cellsUpdated)
