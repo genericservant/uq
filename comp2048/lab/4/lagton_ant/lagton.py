@@ -6,10 +6,10 @@ from scipy import signal
 class Lagton(object):
     """docstring for Lagton."""
     MAP = {\
-            'N': (0, 1),\
-            'E':(1, 0),\
-            'S': (0, -1),\
-            'W':(-1, 0)\
+            'N': (-1, 0),\
+            'E':(0, 1),\
+            'S': (1, 0),\
+            'W':(0, -1)\
             }
     DIRECTIONS=['N', 'E', 'S', 'W']
 
@@ -20,7 +20,7 @@ class Lagton(object):
         self.aliveValue=1
         self.deadValue=0
         self.ant_cell=(int(N/2), int(N/2))
-        self.ant_direction=0
+        self.ant_direction=3
 
     def getStates(self):
         return self.grid
@@ -32,34 +32,43 @@ class Lagton(object):
         return self.getStates()
 
     def evolve(self):
-        def mod(a, b):
-            r = a % b
-            if r < 0:
-                r += b
-            return r
-
         def rotate(mode):
             if mode=='C':
-                self.ant_direction=mod(self.ant_direction+1, len(Lagton.DIRECTIONS))
+                self.ant_direction+=1
+                if self.ant_direction >= 4:
+                    self.ant_direction=0
             elif mode=='A':
-                self.ant_direction=mod(self.ant_direction-1, len(Lagton.DIRECTIONS))
-            move_x, move_y = Lagton.MAP[Lagton.DIRECTIONS[self.ant_direction]]
-            print(move_x, move_y)
-            self.ant_cell = (self.ant_cell[0]+move_x, self.ant_cell[1]+move_y)
+                self.ant_direction-=1
+                if self.ant_direction <= -4:
+                    self.ant_direction=0
 
-        if self.grid[self.ant_cell[0]][self.ant_cell[1]] == 0:
-            self.grid[self.ant_cell[0]][self.ant_cell[1]]=1
+        def move():
+            move_r, move_c = Lagton.MAP[Lagton.DIRECTIONS[self.ant_direction]]
+            self.ant_cell = (self.ant_cell[0]+move_r, self.ant_cell[1]+move_c)
+
+        def toggle(value):
+            updated=np.array(self.grid)
+            updated[self.ant_cell[0]][self.ant_cell[1]]= value
+            return updated
+        #change direction
+        if self.grid[self.ant_cell[0]][self.ant_cell[1]] == self.deadValue:
             rotate('C')
-        elif self.grid[self.ant_cell[0]][self.ant_cell[1]] == 1:
-            self.grid[self.ant_cell[0]][self.ant_cell[1]]=0
+            value=self.aliveValue
+        elif self.grid[self.ant_cell[0]][self.ant_cell[1]] == self.aliveValue:
             rotate('A')
+            value=self.deadValue
+        #toggle cell
+        self.grid=toggle(value)
+
+        #move
+        move()
 
     def show(self):
-        column, row = self.grid.shape
-        for y in range(0, row):
+        row, column = self.grid.shape
+        for c in range(0, column):
             line=""
-            for x in range(0, column):
-                line+="{}".format(self.grid[y][x])
+            for r in range(0, row):
+                line+="{}".format(self.grid[r][c])
             print(line)
         print("ant at {} direction {}".format(self.ant_cell, Lagton.DIRECTIONS[self.ant_direction]))
 
