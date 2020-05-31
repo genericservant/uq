@@ -58,9 +58,22 @@ class GameOfLife:
 
         #implement the GoL rules by thresholding the weights
         #PART A CODE HERE
-        self.rules(self.weighted_sum())
+        if self.fastMode==False:
+            self.rules(self.weighted_sum())
+        else:
+            self.tick()
         #update the grid
 #        self.grid = #UNCOMMENT THIS WITH YOUR UPDATED GRID
+
+
+    "taken from https://pastebin.com/zLu8eNWc"
+    def tick(self):
+        neighbour_counts = np.round(signal.fftconvolve(
+            self.grid, self.neighborhood,
+            mode='same'))
+        birth = neighbour_counts == 3
+        survive = np.logical_and(self.grid, neighbour_counts == 2)
+        self.grid = np.logical_or(birth, survive).astype(np.float)
 
     def rules(self, nbrs):
         row, column = nbrs.shape
@@ -179,7 +192,7 @@ class GameOfLife:
             for y in range(0, column):
                 line+="{}".format(self.grid[x][y])
             print(line)
-    
+
     def insert_from_url(self, url, index=(0,0)):
 
         def read_url(url):
@@ -189,7 +202,9 @@ class GameOfLife:
             stuff=[]
             j=0
             for line in content.split('\r\n'):
-                if line[0] == '!':
+                if line=="":
+                    j+=1
+                elif line[0] == '!':
                     j=-1
                     next
                 i=0
