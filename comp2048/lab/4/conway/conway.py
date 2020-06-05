@@ -16,9 +16,9 @@ class GameOfLife:
     Object for computing Conway's Game of Life (GoL) cellular machine/automata
     '''
     NMAP = [\
-            (-1, -1), (0, -1), (1, -1),\
-            (-1, 0), (1, 0),\
-            (-1, 1), (0, 1), (1, 1),\
+            (-1, -1), (-1, 0), (-1, 1),\
+            (0, -1), (0, 1),\
+            (1, -1), (1, 0), (1, 1),\
             ]
 
 
@@ -77,8 +77,8 @@ class GameOfLife:
 
     def rules(self, nbrs):
         row, column = nbrs.shape
-        for i in range(0, column):
-            for j in range(0, row):
+        for i in range(0, row):
+            for j in range(0, column):
                 if self.grid[i][j] == 1:
                     if nbrs[i][j] < 2 or nbrs[i][j] > 3:
                         self.grid[i][j]=0
@@ -102,16 +102,16 @@ class GameOfLife:
         row, column = self.grid.shape
         sum_grid = np.zeros((row,column), np.uint)
 
-        for i in range(0, column):
-            for j in range(0, row):
+        for r in range(0, row):
+            for c in range(0, column):
                 count=0
                 for cord in GameOfLife.NMAP:
                     x, y = cord
-                    x = mod((i + x), column)
-                    y = mod((j + y), row)
+                    x = mod((r + x), row)
+                    y = mod((c + y), column)
                     if self.grid[x][y] == 1:
                         count+=1
-                sum_grid[i][j]=count
+                sum_grid[r][c]=count
 
         return sum_grid
 

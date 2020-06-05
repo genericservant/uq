@@ -16,9 +16,27 @@ life = conway.GameOfLife(N, False, True)
 #life.insertGlider((55,55))
 #life.insertGliderGun(((0, 0)))
 
+#life.insert_from_url("http://www.conwaylife.com/patterns/72p6h2v0.cells", index=(int(N/2),int(N/2)))
+
+
+
+#n 123
+#life.insert_from_url("http://www.conwaylife.com/patterns/gliderproducingswitchengine.cells")
+
+#n 160
+#life.insert_from_url("http://www.conwaylife.com/patterns/160p10h2v0.cells")
+
+#n 350
+#life.insert_from_url("http://www.conwaylife.com/patterns/doublex.cells")
+
+#n 3685
+#life.insert_from_url("http://www.conwaylife.com/patterns/3enginecordershiprake.cells", index=(50,50))
+
+#n 1812
+life.insert_from_url("http://www.conwaylife.com/patterns/3enginecordershipgun.cells", index=(50,50))
 
 #size 36  n 36
-
+'''
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(0,0))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(100,0))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(200,0))
@@ -60,7 +78,7 @@ life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells",
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(400,300))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(450,350))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(500,400))
-
+'''
 
 
 cells = life.getStates() #initial state
