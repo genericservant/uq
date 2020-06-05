@@ -13,8 +13,8 @@ N = 64
 
 #create the game of life object
 life = conway.GameOfLife(N)
-life.insertBlinker((0,0))
-#life.insertGlider((0,0))
+#life.insertBlinker((0,0))
+#life.insertGlider((30,30))
 #life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells")
 cells = life.getStates() #initial state
 

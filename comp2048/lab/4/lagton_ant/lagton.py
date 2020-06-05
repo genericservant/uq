@@ -1,7 +1,6 @@
 
 
 import numpy as np
-from scipy import signal
 
 class Lagton(object):
     """docstring for Lagton."""
@@ -13,10 +12,8 @@ class Lagton(object):
             }
     DIRECTIONS=['N', 'E', 'S', 'W']
 
-    def __init__(self, N=256, finite=False, fastMode=False):
+    def __init__(self, N=256):
         self.grid=np.zeros((N,N), np.uint)
-        self.finite=finite
-        self.fastMode=fastMode
         self.aliveValue=1
         self.deadValue=0
         self.ant_cell=(int(N/2), int(N/2))

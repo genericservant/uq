@@ -9,7 +9,9 @@ Created on Tue Jan 15 12:37:52 2019
 """
 import lagton
 
-N = 3
+#import lagton_colors as lagton
+
+N = 64
 
 #create the game of life object
 life = lagton.Lagton(N)
@@ -35,7 +37,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 plt.figure(0)
-plt.gray()
+#plt.gray()
 plt.imshow(cells)
 
 ax = plt.gca()
