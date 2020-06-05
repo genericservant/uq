@@ -16,6 +16,9 @@ life = conway.GameOfLife(N, False, True)
 #life.insertGlider((55,55))
 #life.insertGliderGun(((0, 0)))
 
+
+#size 36  n 36
+
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(0,0))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(100,0))
 life.insert_from_url("http://www.conwaylife.com/patterns/gosperglidergun.cells", index=(200,0))
